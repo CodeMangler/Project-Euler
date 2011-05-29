@@ -32,19 +32,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Program.fs" />
-    <Compile Include="1.fs" />
-    <Compile Include="2.fs" />
-    <Compile Include="3.fs" />
-    <Compile Include="4.fs" />
-    <Compile Include="5.fs" />
-    <Compile Include="6.fs" />
-    <Compile Include="7.fs" />
-    <Compile Include="8.fs" />
-    <Compile Include="9.fs" />
-    <Compile Include="10.fs" />
-    <Compile Include="11.fs" />
-    <Compile Include="12.fs" />
-    <Compile Include="13.fs" />
+    <None Include="1.fsx" />
+    <None Include="2.fsx" />
+    <None Include="3.fsx" />
+    <None Include="4.fsx" />
+    <None Include="5.fsx" />
+    <None Include="6.fsx" />
+    <None Include="7.fsx" />
+    <None Include="8.fsx" />
+    <None Include="9.fsx" />
+    <None Include="10.fsx" />
+    <None Include="11.fsx" />
+    <None Include="12.fsx" />
+    <None Include="13.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Core" />
