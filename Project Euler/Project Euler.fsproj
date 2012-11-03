@@ -35,7 +35,6 @@
     <Tailcalls>False</Tailcalls>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Program.fs" />
     <None Include="1.fsx" />
     <None Include="2.fsx" />
     <None Include="3.fsx" />
@@ -49,9 +48,9 @@
     <None Include="11.fsx" />
     <None Include="12.fsx" />
     <None Include="13.fsx" />
+    <None Include="14.fsx" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Core" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core">
