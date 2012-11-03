@@ -21,7 +21,7 @@ let rec fibonacci_series limit series =
     if(series = []) then
         fibonacci_series limit [2;1;]
     else 
-        let next_fib = (List.hd series) + (List.hd(List.tl series))
+        let next_fib = (List.head series) + (List.head(List.tail series))
         if(next_fib > limit) then
             (series)
         else
@@ -35,8 +35,10 @@ let sum_even acc x =
         acc ;;
 
 let sum_of_even_valued_fibonacci_terms limit = 
-    List.fold_left sum_even 0 (fibonacci_series limit []);;
+    List.fold sum_even 0 (fibonacci_series limit []);;
 
+
+printf "%d\n" (sum_of_even_valued_fibonacci_terms 4000000)
 
 // Correct answer: 4613732
 // i.e. sum_of_even_valued_fibonacci_terms 4000000;; = 4613732

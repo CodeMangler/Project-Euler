@@ -56,18 +56,18 @@ let product_of n list =
     let rec product_loop a_list i acc =
         match i with
         | 0 -> acc
-        | _ -> (product_loop (List.tl a_list) (i - 1) ((List.hd a_list) * acc) )
+        | _ -> (product_loop (List.tail a_list) (i - 1) ((List.head a_list) * acc) )
         
     product_loop list n 1;;
 
-let max_consecutive_product_of n (the_list:'a list list) = 
+let max_consecutive_product_of n (the_list:int list list) = 
     let rec max_consecutive_product_loop current_max a_list =
         match a_list with
         | [] -> current_max
         | _ -> if ((List.length a_list) < n) then
                 current_max
                else
-                max_consecutive_product_loop (max current_max (product_of n a_list)) (List.tl a_list)
+                max_consecutive_product_loop (max current_max (product_of n a_list)) (List.tail a_list)
     
     let mutable max_in_all = 0
     for smaller_list in the_list do
@@ -81,7 +81,7 @@ let max_consecutive_product_of n (the_list:'a list list) =
 let rows (matrix: 'a array array) = 
     let mutable rows = []
     for i in 0..((Array.length matrix) - 1) do
-        rows <- List.Cons(Array.to_list matrix.[i], rows)
+        rows <- List.Cons(Array.toList matrix.[i], rows)
     done
     (rows)
     ;;
@@ -141,7 +141,7 @@ let diagonals (matrix: 'a array array) =
     (diagonals)
     ;;
 
-let max_consecutive_product_in_matrix n (matrix: 'a array array)= 
+let max_consecutive_product_in_matrix n (matrix: int array array)= 
     let max_row_product = (max_consecutive_product_of n (rows matrix))
     let max_column_product = (max_consecutive_product_of n (columns matrix))
     let max_diagonal_product = (max_consecutive_product_of n (diagonals matrix))
@@ -154,6 +154,8 @@ let solution =
     ;;
 
 // Runs fast, but the code's REALLY ugly :(
+
+printf "%d\n" solution
 
 // Correct answer: 70600674
 // solution;; = 70600674

@@ -35,5 +35,7 @@ let nth_prime n =
     
     ith_prime 2 1;;
 
+printf "%d\n" (nth_prime 10001)
+
 // Correct answer: 104743
 // nth_prime 10001;; = 104743

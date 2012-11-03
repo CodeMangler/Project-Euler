@@ -32,12 +32,12 @@ let to_int (c:char) =
     System.Int32.Parse(c.ToString()) ;;
 
 let to_number_list (string_num:string) =
-    Array.to_list (Array.map to_int (string_num.ToCharArray()));;
+    Array.toList (Array.map to_int (string_num.ToCharArray()));;
 
 let rec product_of_first n num_list =
     match n with
     | 0 -> 1
-    | _ -> (List.hd num_list) * product_of_first (n - 1) (List.tl num_list);;
+    | _ -> (List.head num_list) * product_of_first (n - 1) (List.tail num_list);;
 
 let rec max_product_of_first n max_till_now num_list =
     let current_max = max (product_of_first n num_list) max_till_now
@@ -45,10 +45,12 @@ let rec max_product_of_first n max_till_now num_list =
     if num_list.Length <= n then
         current_max
     else
-        max_product_of_first n current_max (List.tl num_list);;
+        max_product_of_first n current_max (List.tail num_list);;
 
 let solution = 
    (the_number |> to_number_list) |> max_product_of_first 5 0 ;;
+
+printf "%d\n" solution
 
 // Correct answer: 40824
 // solution ;; = 40824

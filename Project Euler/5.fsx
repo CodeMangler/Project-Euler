@@ -27,5 +27,7 @@ let rec number_divisible_by_all_numbers_not_exceeding n iteration =
 let smallest_number_divisible_by_all_numbers_not_exceeding_20 = 
     number_divisible_by_all_numbers_not_exceeding 20 1;;
 
+printf "%d\n" smallest_number_divisible_by_all_numbers_not_exceeding_20
+
 // Correct answer: 232792560
 // smallest_number_divisible_by_all_numbers_not_exceeding_20 ;; -> 232792560

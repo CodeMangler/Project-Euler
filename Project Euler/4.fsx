@@ -30,6 +30,8 @@ let rec palindromic_multiple n acc =
         
 let largest_three_digit_product_palindrome =
     List.max (palindromic_multiple 999 []) ;;
-    
+
+printf "%d\n" largest_three_digit_product_palindrome
+
 // Correct answer: 906609
 // i.e. largest_three_digit_product_palindrome;; = 906609

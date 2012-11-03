@@ -27,6 +27,8 @@ let rec prime_factors (n:bigint) (factors:list<bigint>) =
             []
 ;;
 
+printf "%A\n" (prime_factors 600851475143I [])
+
 // Correct answer: 6857
 // i.e. prime_factors 600851475143I [];; = [71I; 839I; 1471I; 6857I]
 // List.max (prime_factors 600851475143I []);; = 6857I

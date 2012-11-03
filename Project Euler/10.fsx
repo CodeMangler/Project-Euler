@@ -45,13 +45,13 @@ let prime_series (limit:bigint) =
 // Sieve of Eratosthenes -> http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 // Works like a charm :)     
 let prime_series_sieve (limit:bigint) = 
-    let series = List.to_array [0I..limit]
+    let series = List.toArray [0I..limit]
     series.SetValue(0I, 1)
 
     let rec eliminate_multiples (n:bigint) (i:bigint) = 
         let index = (i * n) // Just to reduce as many calculations as possible
         if index < bigint.Parse(series.Length.ToString()) then 
-            series.SetValue(0I, (bigint.ToInt64(index)))
+            series.SetValue(0I, (int64(index)))
             eliminate_multiples n (i + 1I)
     
     for n in [2I..(limit/2I)] do
@@ -61,6 +61,8 @@ let prime_series_sieve (limit:bigint) =
 
 let sum_of_primes_under (limit:bigint) =
     Array.sum (prime_series_sieve limit);;
+
+printf "%O\n" (sum_of_primes_under 2000000I)
 
 // Correct answer: 142913828922I i.e. 142913828922
 // sum_of_primes_under 2000000I;; = 142913828922I (and that took about 2.5 minutes to calculate!!!

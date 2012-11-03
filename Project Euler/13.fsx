@@ -252,5 +252,7 @@ let simpler_solution =
     List.fold (+) 0I numbers
 ;;
 
+printf "%O\n" simpler_solution
+
 // Correct answer: 5537376230
 // simpler_solution;; = 5537376230390876637302048746832985971773659831892672

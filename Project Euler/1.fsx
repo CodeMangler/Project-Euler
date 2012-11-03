@@ -9,13 +9,13 @@
 let rec sum list =
     match list with
     | [] -> 0
-    | _ -> (List.hd list) + sum (List.tl list) ;;
+    | _ -> (List.head list) + sum (List.tail list) ;;
     
 
 let multiple_of x n = (x % n = 0) ;;
 
 // OR a simpler sum:
-// let sum list = List.fold_left (+) 0 list
+// let sum list = List.fold (+) 0 list
 
 // A = {3, 6, 9 ...}
 // B = {5, 10, 9 ...}

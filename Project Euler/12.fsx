@@ -103,6 +103,8 @@ let triangle_number_search (minimum_divisor_count:bigint) =
     n
     ;;
 
+printf "%O\n" (triangle_number_search 500I)
+
 // Correct answer: 76576500I i.e. 76576500
 // (triangle_number_search 500I);; = 76576500I  [It takes a little less than a minute to calculate.. Can definitely be improved..]
 // Just for curiosity: (number_of_divisors 76576500I);; = 576I

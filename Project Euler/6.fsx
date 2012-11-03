@@ -21,5 +21,7 @@ let square x = x * x;;
 let solution = 
     abs ((sum_of_squares_of_first_n 100) - (square (sum_of_first_n 100)));;
 
+printf "%d\n" solution
+
 // Correct answer: 25164150
 // solution ;; = 25164150

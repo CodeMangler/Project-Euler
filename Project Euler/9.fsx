@@ -44,6 +44,8 @@ let solution =
     let triplet = pythagorean_triplet_with_sum 1000
     (triplet.[0] * triplet.[1] * triplet.[2]);;
 
+printf "%d\n" solution
+
 // Correct answer: 31875000
 // pythagorean_triplet_with_sum 1000;; = [200; 375; 425]
 // solution ;; = 31875000
